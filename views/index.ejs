@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Submit</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 2rem; }
+      form { display: flex; gap: .5rem; align-items: center; }
+      input { padding: .5rem; font-size: 1rem; }
+      button { padding: .5rem 1rem; }
+      .result { margin: 1rem 0; font-weight: bold; }
+    </style>
+  </head>
+  <body>
+    <% if (result) { %>
+      <div class="result">Result: <%= result %></div>
+    <% } %>
+
+    <form action="/submit" method="post">
+      <input name="name" placeholder="Name" required>
+      <input name="email" placeholder="Email" required>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
